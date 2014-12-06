@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README.markdown - RDoc Documentation</title>
+
+<link href="../../../fonts.css" rel="stylesheet">
+<link href="../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/navigation.js"></script>
+<script src="../../../js/search_index.js"></script>
+<script src="../../../js/search.js"></script>
+<script src="../../../js/searcher.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-stdlib">stdlib</a>
+    <li><a href="#label-Table+of+Contents">Table of Contents</a>
+    <li><a href="#label-Overview">Overview</a>
+    <li><a href="#label-Module+Description">Module Description</a>
+    <li><a href="#label-Setup">Setup</a>
+    <li><a href="#label-Usage">Usage</a>
+    <li><a href="#label-Reference">Reference</a>
+    <li><a href="#label-Classes">Classes</a>
+    <li><a href="#label-Public+Classes">Public Classes</a>
+    <li><a href="#label-Private+Classes">Private Classes</a>
+    <li><a href="#label-Functions">Functions</a>
+    <li><a href="#label-Limitations">Limitations</a>
+    <li><a href="#label-Version+Compatibility">Version Compatibility</a>
+    <li><a href="#label-Development">Development</a>
+    <li><a href="#label-Contributors">Contributors</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Vagrantfile.html">Vagrantfile</a>
+  
+    <li><a href="../../../app/index_php.html">index.php</a>
+  
+    <li><a href="../../../doc/AlsoString_html.html">AlsoString.html</a>
+  
+    <li><a href="../../../doc/Class_html.html">Class.html</a>
+  
+    <li><a href="../../../doc/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../../doc/Dir_html.html">Dir.html</a>
+  
+    <li><a href="../../../doc/Facter_html.html">Facter.html</a>
+  
+    <li><a href="../../../doc/Facter/Util_html.html">Util.html</a>
+  
+    <li><a href="../../../doc/Facter/Util/DotD_html.html">DotD.html</a>
+  
+    <li><a href="../../../doc/Facter/Util/PuppetSettings_html.html">PuppetSettings.html</a>
+  
+    <li><a href="../../../doc/Facter/Util/RootHome_html.html">RootHome.html</a>
+  
+    <li><a href="../../../doc/HavePrintedMatcher_html.html">HavePrintedMatcher.html</a>
+  
+    <li><a href="../../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li><a href="../../../doc/Object_html.html">Object.html</a>
+  
+    <li><a href="../../../doc/Puppet_html.html">Puppet.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser_html.html">Parser.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser/Functions_html.html">Functions.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser/Functions/Augeas_html.html">Augeas.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser/Functions/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser/Functions/IPAddr_html.html">IPAddr.html</a>
+  
+    <li><a href="../../../doc/Puppet/Parser/Functions/YAML_html.html">YAML.html</a>
+  
+    <li><a href="../../../doc/Puppet/Resource_html.html">Resource.html</a>
+  
+    <li><a href="../../../doc/Puppet/Type_html.html">Type.html</a>
+  
+    <li><a href="../../../doc/Puppet/Util_html.html">Util.html</a>
+  
+    <li><a href="../../../doc/Puppet/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/mysql/files/my_cnf_html.html">my_cnf.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/mysql/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/nginx/files/127_0_0_1_html.html">127_0_0_1.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/nginx/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/php/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/CONTRIBUTING_md_html.html">CONTRIBUTING_md.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/LICENSE_html.html">LICENSE.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/README_DEVELOPER_markdown_html.html">README_DEVELOPER_markdown.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/README_SPECS_markdown_html.html">README_SPECS_markdown.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/README_markdown_html.html">README_markdown.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/RELEASE_PROCESS_markdown_html.html">RELEASE_PROCESS_markdown.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/checksums_json_html.html">checksums_json.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/manifests/stages_pp_html.html">stages_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/metadata_json_html.html">metadata_json.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/spec/spec_opts_html.html">spec_opts.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/tests/file_line_pp_html.html">file_line_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/tests/has_interface_with_pp_html.html">has_interface_with_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/tests/has_ip_address_pp_html.html">has_ip_address_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/tests/has_ip_network_pp_html.html">has_ip_network_pp.html</a>
+  
+    <li><a href="../../../doc/Puppet/modules/stdlib/tests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec_html.html">PuppetSpec.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Compiler_html.html">Compiler.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Files_html.html">Files.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Fixtures_html.html">Fixtures.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Modules_html.html">Modules.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Pops_html.html">Pops.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Scope_html.html">Scope.html</a>
+  
+    <li><a href="../../../doc/PuppetSpec/Settings_html.html">Settings.html</a>
+  
+    <li><a href="../../../doc/PuppetlabsSpec_html.html">PuppetlabsSpec.html</a>
+  
+    <li><a href="../../../doc/RSpec_html.html">RSpec.html</a>
+  
+    <li><a href="../../../doc/RSpec/Core_html.html">Core.html</a>
+  
+    <li><a href="../../../doc/RSpec/Matchers_html.html">Matchers.html</a>
+  
+    <li><a href="../../../doc/RSpec/Matchers/BlockAliases_html.html">BlockAliases.html</a>
+  
+    <li><a href="../../../doc/StubModule_html.html">StubModule.html</a>
+  
+    <li><a href="../../../doc/Vagrantfile_html.html">Vagrantfile.html</a>
+  
+    <li><a href="../../../doc/app/index_php_html.html">index_php.html</a>
+  
+    <li><a href="../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li><a href="../../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../../doc/js/search_js.html">search.js</a>
+  
+    <li><a href="../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../../puppet/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../puppet/modules/mysql/files/my_cnf.html">my.cnf</a>
+  
+    <li><a href="../../../puppet/modules/mysql/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../puppet/modules/nginx/files/127_0_0_1.html">127.0.0.1</a>
+  
+    <li><a href="../../../puppet/modules/nginx/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../puppet/modules/php/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/README_markdown.html">README.markdown</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/README_DEVELOPER_markdown.html">README_DEVELOPER.markdown</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/README_SPECS_markdown.html">README_SPECS.markdown</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/RELEASE_PROCESS_markdown.html">RELEASE_PROCESS.markdown</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/checksums_json.html">checksums.json</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/manifests/stages_pp.html">stages.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/metadata_json.html">metadata.json</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/tests/file_line_pp.html">file_line.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/tests/has_interface_with_pp.html">has_interface_with.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/tests/has_ip_address_pp.html">has_ip_address.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/tests/has_ip_network_pp.html">has_ip_network.pp</a>
+  
+    <li><a href="../../../puppet/modules/stdlib/tests/init_pp.html">init.pp</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page puppet/modules/stdlib/README.markdown">
+
+<h1 id="label-stdlib">stdlib<span><a href="#label-stdlib">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p><a href="https://travis-ci.org/puppetlabs/puppetlabs-stdlib"><img
+src="https://travis-ci.org/puppetlabs/puppetlabs-stdlib.png?branch=master"></a></p>
+
+<h4 id="label-Table+of+Contents">Table of Contents<span><a href="#label-Table+of+Contents">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
+<ol><li>
+<p><a href="#overview">Overview</a></p>
+</li><li>
+<p><a href="#module-description">Module Description - What the module does and
+why it is useful</a></p>
+</li><li>
+<p><a href="#setup">Setup - The basics of getting started with stdlib</a></p>
+</li><li>
+<p><a href="#usage">Usage - Configuration options and additional
+functionality</a></p>
+</li><li>
+<p><a href="#reference">Reference - An under-the-hood peek at what the module
+is doing and how</a></p>
+</li><li>
+<p><a href="#limitations">Limitations - OS compatibility, etc.</a></p>
+</li><li>
+<p><a href="#development">Development - Guide for contributing to the
+module</a></p>
+</li></ol>
+
+<h2 id="label-Overview">Overview<span><a href="#label-Overview">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Adds a standard library of resources for Puppet modules.</p>
+
+<h2 id="label-Module+Description">Module Description<span><a href="#label-Module+Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>This module provides a standard library of resources for the development of
+Puppet modules. Puppet modules make heavy use of this standard library. The
+stdlib module adds the following resources to Puppet:</p>
+<ul><li>
+<p>Stages</p>
+</li><li>
+<p>Facts</p>
+</li><li>
+<p>Functions</p>
+</li><li>
+<p>Defined resource types</p>
+</li><li>
+<p>Types</p>
+</li><li>
+<p>Providers</p>
+</li></ul>
+
+<h2 id="label-Setup">Setup<span><a href="#label-Setup">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Installing the stdlib module adds the functions, facts, and resources of
+this standard library to Puppet.</p>
+
+<h2 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>After you&#39;ve installed stdlib, all of its functions, facts, and
+resources are available for module use or development.</p>
+
+<p>If you want to use a standardized set of run stages for Puppet,
+<code>include stdlib</code> in your manifest.</p>
+
+<h2 id="label-Reference">Reference<span><a href="#label-Reference">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<h3 id="label-Classes">Classes<span><a href="#label-Classes">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<h4 id="label-Public+Classes">Public Classes<span><a href="#label-Public+Classes">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
+<ul><li>
+<p><code>stdlib</code>: Most of stdlib&#39;s features are automatically loaded
+by Puppet. To use standardized run stages in Puppet, declare this class in
+your manifest with <code>include stdlib</code>.</p>
+</li></ul>
+
+<p>When declared, stdlib declares all other classes in the module. The only
+other class currently included in the module is
+<code>stdlib::stages</code>.</p>
+
+<p>The stdlib class has no parameters.</p>
+
+<h4 id="label-Private+Classes">Private Classes<span><a href="#label-Private+Classes">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
+<ul><li>
+<p><code>stdlib::stages</code>: This class manages a standard set of run
+stages for Puppet. It is managed by the stdlib class and should not be
+declared independently.</p>
+</li></ul>
+
+<p>The <code>stdlib::stages</code> class declares various run stages for
+deploying infrastructure, language runtimes, and application layers. The
+high level stages are (in order):</p>
+<ul><li>
+<p>setup</p>
+</li><li>
+<p>main</p>
+</li><li>
+<p>runtime</p>
+</li><li>
+<p>setup_infra</p>
+</li><li>
+<p>deploy_infra</p>
+</li><li>
+<p>setup_app</p>
+</li><li>
+<p>deploy_app</p>
+</li><li>
+<p>deploy</p>
+</li></ul>
+
+<p>Sample usage:</p>
+
+<p><code>   node default {     include stdlib     class { java: stage =&gt;
+&#39;runtime&#39; }   } </code></p>
+
+<h3 id="label-Functions">Functions<span><a href="#label-Functions">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<ul><li>
+<p><code>abs</code>: Returns the absolute value of a number; for example,
+&#39;-34.56&#39; becomes &#39;34.56&#39;. Takes a single integer and float
+value as an argument. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>any2array</code>: This converts any object to an array containing
+that object. Empty argument lists are converted to an empty array. Arrays
+are left untouched. Hashes are converted to arrays of alternating keys and
+values. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>base64</code>: Converts a string to and from base64 encoding.
+Requires an action (&#39;encode&#39;, &#39;decode&#39;) and either a plain
+or base64-encoded string. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>bool2num</code>: Converts a boolean to a number. Converts values:</p>
+</li><li>
+<p>&#39;false&#39;, &#39;f&#39;, &#39;0&#39;, &#39;n&#39;, and &#39;no&#39; to
+0.</p>
+</li><li>
+<p>&#39;true&#39;, &#39;t&#39;, &#39;1&#39;, &#39;y&#39;, and &#39;yes&#39; to
+1.  Requires a single boolean or string as an input. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>capitalize</code>: Capitalizes the first letter of a string or array
+of strings. Requires either a single string or an array as an input.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>chomp</code>: Removes the record separator from the end of a string
+or an array of strings; for example, &#39;hellon&#39; becomes
+&#39;hello&#39;. Requires a single string or array as an input.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>chop</code>: Returns a new string with the last character removed. If
+the string ends with &#39;rn&#39;, both characters are removed. Applying
+<code>chop</code> to an empty string returns an empty string. If you want
+to merely remove record separators, then you should use the
+<code>chomp</code> function. Requires a string or an array of strings as
+input. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>concat</code>: Appends the contents of array 2 onto array 1. For
+example, <code>concat(['1','2','3'],&#39;4&#39;)</code> results in:
+[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>count</code>: Takes an array as first argument and an optional second
+argument. Count the number of elements in array that matches second
+argument. If called with only an array, it counts the number of elements
+that are <strong>not</strong> nil/undef. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>defined_with_params</code>: Takes a resource reference and an
+optional hash of attributes. Returns &#39;true&#39; if a resource with the
+specified attributes has already been added to the catalog. Returns
+&#39;false&#39; otherwise.</p>
+</li></ul>
+
+<p>“`  user { &#39;dan&#39;:  ensure =&gt; present,  }</p>
+
+<p>if ! <a href="dan">defined_with_params(User</a>, {&#39;ensure&#39; =&gt;
+&#39;present&#39; }) {  user { &#39;dan&#39;: ensure =&gt; present, }  } 
+“`</p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>delete</code>: Deletes all instances of a given element from an
+array, substring from a string, or key from a hash. For example,
+<code>delete(['a','b','c','b'], &#39;b&#39;)</code> returns
+[&#39;a&#39;,&#39;c&#39;]; <code>delete(&#39;abracadabra&#39;,
+&#39;bra&#39;)</code> returns &#39;acada&#39;. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>delete_at</code>: Deletes a determined indexed value from an array.
+For example, <code>delete_at(['a','b','c'], 1)</code> returns
+[&#39;a&#39;,&#39;c&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>delete_values</code>: Deletes all instances of a given value from a
+hash. For example,
+<code>delete_values({&#39;a&#39;=&gt;&#39;A&#39;,&#39;b&#39;=&gt;&#39;B&#39;,&#39;c&#39;=&gt;&#39;C&#39;,&#39;B&#39;=&gt;&#39;D&#39;},
+&#39;B&#39;)</code> returns
+{&#39;a&#39;=&gt;&#39;A&#39;,&#39;c&#39;=&gt;&#39;C&#39;,&#39;B&#39;=&gt;&#39;D&#39;}
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>delete_undef_values</code>: Deletes all instances of the undef value
+from an array or hash. For example, <code>$hash =
+delete_undef_values({a=&gt;&#39;A&#39;, b=&gt;&#39;&#39;, c=&gt;undef, d
+=&gt; false})</code> returns {a =&gt; &#39;A&#39;, b =&gt; &#39;&#39;, d
+=&gt; false}. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>difference</code>: Returns the difference between two arrays. The
+returned array is a copy of the original array, removing any items that
+also appear in the second array. For example,
+<code>difference(["a","b","c"],[&quot;b&quot;,&quot;c&quot;,&quot;d&quot;])</code>
+returns [“a”].</p>
+</li><li>
+<p><code>dirname</code>: Returns the <code>dirname</code> of a path. For
+example, <code>dirname(&#39;/path/to/a/file.ext&#39;)</code> returns
+&#39;/path/to/a&#39;.</p>
+</li><li>
+<p><code>downcase</code>: Converts the case of a string or of all strings in
+an array to lowercase. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>empty</code>: Returns &#39;true&#39; if the variable is empty.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>ensure_packages</code>: Takes a list of packages and only installs
+them if they don&#39;t already exist. It optionally takes a hash as a
+second parameter to be passed as the third argument to the
+<code>ensure_resource()</code> function. <em>Type</em>: statement</p>
+</li><li>
+<p><code>ensure_resource</code>: Takes a resource type, title, and a list of
+attributes that describe a resource.</p>
+</li></ul>
+
+<p><code>   user { &#39;dan&#39;:     ensure =&gt; present,   } </code></p>
+
+<p>This example only creates the resource if it does not already exist:</p>
+
+<pre class="ruby"><span class="ruby-value">%xensure_resource(&#39;user&#39;, &#39;dan&#39;, {&#39;ensure&#39; =&gt; &#39;present&#39; })`</span>
+</pre>
+
+<p>If the resource already exists, but does not match the specified
+parameters, this function attempts to recreate the resource, leading to a
+duplicate resource definition error.</p>
+
+<p>An array of resources can also be passed in, and each will be created with
+the type and parameters specified if it doesn&#39;t already exist.</p>
+
+<p><code>ensure_resource(&#39;user&#39;, [&#39;dan&#39;,&#39;alex&#39;],
+{&#39;ensure&#39; =&gt; &#39;present&#39;})</code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>file_line</code>: This resource ensures that a given line is
+contained within a file. You can also use match to replace existing lines.</p>
+</li></ul>
+
+<p><em>Example:</em></p>
+
+<p>“`  file_line { &#39;sudo_rule&#39;:  path =&gt; &#39;/etc/sudoers&#39;, 
+line =&gt; &#39;%sudo ALL=(ALL) ALL&#39;,  }</p>
+
+<p>file_line { &#39;change_mount&#39;:  path =&gt; &#39;/etc/fstab&#39;,  line
+=&gt; &#39;10.0.0.1:/vol/data /opt/data nfs defaults 0 0&#39;,  match =&gt;
+&#39;^172.16.17.2:/vol/old&#39;,  }  “`</p>
+
+<p><em>Type</em>: resource</p>
+<ul><li>
+<p><code>flatten</code>: This function flattens any deeply nested arrays and
+returns a single flat array as a result. For example,
+<code>flatten([&#39;a&#39;, [&#39;b&#39;, [&#39;c&#39;]]])</code> returns
+[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>floor</code>: Returns the largest integer less than or equal to the
+argument. Takes a single numeric value as an argument. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>fqdn_rotate</code>: Rotates an array a random number of times based
+on a node&#39;s fqdn. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>get_module_path</code>: Returns the absolute path of the specified
+module for the current environment.</p>
+</li></ul>
+
+<p><code>$module_path = get_module_path(&#39;stdlib&#39;)</code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>getparam</code>: Takes a resource reference and the name of the
+parameter and returns the value of the resource&#39;s parameter. For
+example, the following code returns &#39;param_value&#39;.</p>
+</li></ul>
+
+<p><em>Example:</em></p>
+
+<p>“`  define example_resource($param) {  }</p>
+
+<p>example_resource { “example_resource_instance”:  param =&gt; “param_value” 
+}</p>
+
+<p><a href=""example_resource_instance"">getparam(Example_resource</a>,
+“param”)  “`</p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>getvar</code>: Lookup a variable in a remote namespace.</p>
+</li></ul>
+
+<p>For example:</p>
+
+<p><code>   $foo = getvar(&#39;site::data::foo&#39;)   # Equivalent to $foo =
+$site::data::foo </code></p>
+
+<p>This is useful if the namespace itself is stored in a string:</p>
+
+<p><code>   $datalocation = &#39;site::data&#39;   $bar =
+getvar(&quot;${datalocation}::bar&quot;)   # Equivalent to $bar =
+$site::data::bar </code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>grep</code>: This function searches through an array and returns any
+elements that match the provided regular expression. For example,
+<code>grep(['aaa','bbb','ccc','aaaddd'], &#39;aaa&#39;)</code> returns
+[&#39;aaa&#39;,&#39;aaaddd&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>has_interface_with</code>: Returns boolean based on kind and value:</p>
+</li><li>
+<p>macaddress</p>
+</li><li>
+<p>netmask</p>
+</li><li>
+<p>ipaddress</p>
+</li><li>
+<p>network</p>
+</li></ul>
+
+<p><em>Examples:</em></p>
+
+<p><code>   has_interface_with(&quot;macaddress&quot;,
+&quot;x:x:x:x:x:x&quot;)   has_interface_with(&quot;ipaddress&quot;,
+&quot;127.0.0.1&quot;)    =&gt; true </code></p>
+
+<p>If no kind is given, then the presence of the interface is checked:</p>
+
+<p><code>   has_interface_with(&quot;lo&quot;)                        =&gt;
+true </code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>has_ip_address</code>: Returns true if the client has the requested
+IP address on some interface. This function iterates through the
+<code>interfaces</code> fact and checks the <code>ipaddress_IFACE</code>
+facts, performing a simple string comparison. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>has_ip_network</code>: Returns true if the client has an IP address
+within the requested network. This function iterates through the
+&#39;interfaces&#39; fact and checks the &#39;network_IFACE&#39; facts,
+performing a simple string comparision. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>has_key</code>: Determine if a hash has a certain key value.</p>
+</li></ul>
+
+<p><em>Example</em>:</p>
+
+<p><code>   $my_hash = {&#39;key_one&#39; =&gt; &#39;value_one&#39;}   if
+has_key($my_hash, &#39;key_two&#39;) {     notice(&#39;we will not reach
+here&#39;)   }   if has_key($my_hash, &#39;key_one&#39;) {    
+notice(&#39;this will be printed&#39;)   } </code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>hash</code>: This function converts an array into a hash. For
+example, <code>hash(['a',1,'b',2,'c',3])</code> returns
+{&#39;a&#39;=&gt;1,&#39;b&#39;=&gt;2,&#39;c&#39;=&gt;3}. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>intersection</code>: This function returns an array an intersection
+of two. For example,
+<code>intersection(["a","b","c"],[&quot;b&quot;,&quot;c&quot;,&quot;d&quot;])</code>
+returns [“b”,“c”].</p>
+</li><li>
+<p><code>is_array</code>: Returns &#39;true&#39; if the variable passed to
+this function is an array. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_bool</code>: Returns &#39;true&#39; if the variable passed to this
+function is a boolean. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_domain_name</code>: Returns &#39;true&#39; if the string passed to
+this function is a syntactically correct domain name. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_float</code>: Returns &#39;true&#39; if the variable passed to
+this function is a float. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_function_available</code>: This function accepts a string as an
+argument and determines whether the Puppet runtime has access to a function
+by that name. It returns &#39;true&#39; if the function exists,
+&#39;false&#39; if not. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_hash</code>: Returns &#39;true&#39; if the variable passed to this
+function is a hash. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_integer</code>: Returns &#39;true&#39; if the variable returned to
+this string is an integer. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_ip_address</code>: Returns &#39;true&#39; if the string passed to
+this function is a valid IP address. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_mac_address</code>: Returns &#39;true&#39; if the string passed to
+this function is a valid MAC address. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_numeric</code>: Returns &#39;true&#39; if the variable passed to
+this function is a number. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>is_string</code>: Returns &#39;true&#39; if the variable passed to
+this function is a string. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>join</code>: This function joins an array into a string using a
+separator. For example, <code>join(['a','b','c'], &quot;,&quot;)</code>
+results in: “a,b,c”. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>join_keys_to_values</code>: This function joins each key of a hash to
+that key&#39;s corresponding value with a separator. Keys and values are
+cast to strings. The return value is an array in which each element is one
+joined key/value pair. For example,
+<code>join_keys_to_values({&#39;a&#39;=&gt;1,&#39;b&#39;=&gt;2}, &quot; is
+&quot;)</code> results in [“a is 1”,“b is 2”]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>keys</code>: Returns the keys of a hash as an array. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>loadyaml</code>: Load a YAML file containing an array, string, or
+hash, and return the data in the corresponding native data type. For
+example:</p>
+</li></ul>
+
+<p><code>   $myhash = loadyaml(&#39;/etc/puppet/data/myhash.yaml&#39;) </code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>lstrip</code>: Strips leading spaces to the left of a string.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>max</code>: Returns the highest value of all arguments. Requires at
+least one argument. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>member</code>: This function determines if a variable is a member of
+an array. For example, <code>member(['a','b'], &#39;b&#39;)</code> returns
+&#39;true&#39;, while <code>member(['a','b'], &#39;c&#39;)</code> returns
+&#39;false&#39;. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>merge</code>: Merges two or more hashes together and returns the
+resulting hash.</p>
+</li></ul>
+
+<p><em>Example</em>:</p>
+
+<p><code>   $hash1 = {&#39;one&#39; =&gt; 1, &#39;two&#39; =&gt; 2}   $hash2 =
+{&#39;two&#39; =&gt; &#39;dos&#39;, &#39;three&#39; =&gt; &#39;tres&#39;}  
+$merged_hash = merge($hash1, $hash2)   # The resulting hash is equivalent
+to:   # $merged_hash =  {&#39;one&#39; =&gt; 1, &#39;two&#39; =&gt;
+&#39;dos&#39;, &#39;three&#39; =&gt; &#39;tres&#39;} </code></p>
+
+<p>When there is a duplicate key, the key in the rightmost hash “wins.”
+<em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>min</code>: Returns the lowest value of all arguments. Requires at
+least one argument. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>num2bool</code>: This function converts a number or a string
+representation of a number into a true boolean. Zero or anything
+non-numeric becomes &#39;false&#39;. Numbers greater than 0 become
+&#39;true&#39;. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>parsejson</code>: This function accepts JSON as a string and converts
+into the correct Puppet structure. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>parseyaml</code>: This function accepts YAML as a string and converts
+it into the correct Puppet structure. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>pick</code>: From a list of values, returns the first value that is
+not undefined or an empty string. Takes any number of arguments, and raises
+an error if all values are undefined or empty.</p>
+</li></ul>
+
+<p><code>   $real_jenkins_version = pick($::jenkins_version, &#39;1.449&#39;)
+</code></p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>prefix</code>: This function applies a prefix to all elements in an
+array. For example, <code>prefix(['a','b','c'], &#39;p&#39;)</code> returns
+[&#39;pa&#39;,&#39;pb&#39;,&#39;pc&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>private</code>: This function sets the current class or definition as
+private. Calling the class or definition from outside the current module
+will fail. For example, <code>private()</code> called in class
+<code>foo::bar</code> outputs the following message if class is called from
+outside module <code>foo</code>:</p>
+</li></ul>
+
+<p><code>   Class foo::bar is private </code></p>
+
+<p>You can specify the error message you want to use:</p>
+
+<p><code>   private(&quot;You&#39;re not supposed to do that!&quot;) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>range</code>: When given range in the form of &#39;(start,
+stop)&#39;, <code>range</code> extrapolates a range as an array. For
+example, <code>range(&quot;0&quot;, &quot;9&quot;)</code> returns
+[0,1,2,3,4,5,6,7,8,9]. Zero-padded strings are converted to integers
+automatically, so <code>range(&quot;00&quot;, &quot;09&quot;)</code>
+returns [0,1,2,3,4,5,6,7,8,9].</p>
+</li></ul>
+
+<p>Non-integer strings are accepted; <code>range(&quot;a&quot;,
+&quot;c&quot;)</code> returns [“a”,“b”,“c”], and
+<code>range(&quot;host01&quot;, &quot;host10&quot;)</code> returns
+[“host01”, “host02”, …, “host09”, “host10”].</p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>reject</code>: This function searches through an array and rejects
+all elements that match the provided regular expression. For example,
+<code>reject(['aaa','bbb','ccc','aaaddd'], &#39;aaa&#39;)</code> returns
+[&#39;bbb&#39;,&#39;ccc&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>reverse</code>: Reverses the order of a string or array.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>rstrip</code>: Strips leading spaces to the right of the
+string.<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>shuffle</code>: Randomizes the order of a string or array elements.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>size</code>: Returns the number of elements in a string or array.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>sort</code>: Sorts strings and arrays lexically. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>squeeze</code>: Returns a new string where runs of the same character
+that occur in this set are replaced by a single character. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>str2bool</code>: This converts a string to a boolean. This attempts
+to convert strings that contain values such as &#39;1&#39;, &#39;t&#39;,
+&#39;y&#39;, and &#39;yes&#39; to &#39;true&#39; and strings that contain
+values such as &#39;0&#39;, &#39;f&#39;, &#39;n&#39;, and &#39;no&#39; to
+&#39;false&#39;. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>str2saltedsha512</code>: This converts a string to a salted-SHA512
+password hash, used for OS X versions &gt;= 10.7. Given any string, this
+function returns a hex version of a salted-SHA512 password hash, which can
+be inserted into your Puppet manifests as a valid password attribute.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>strftime</code>: This function returns formatted time. For example,
+<code>strftime(&quot;%s&quot;)</code> returns the time since epoch, and
+<code>strftime(&quot;%Y=%m-%d&quot;)</code> returns the date.
+<em>Type</em>: rvalue</p>
+</li></ul>
+
+<p><em>Format:</em></p>
+
+<pre>* `%a`: The abbreviated weekday name (&#39;Sun&#39;)
+* `%A`: The  full  weekday  name (&#39;Sunday&#39;)
+* `%b`: The abbreviated month name (&#39;Jan&#39;)
+* `%B`: The  full  month  name (&#39;January&#39;)
+* `%c`: The preferred local date and time representation
+* `%C`: Century (20 in 2009)
+* `%d`: Day of the month (01..31)
+* `%D`: Date (%m/%d/%y)
+* `%e`: Day of the month, blank-padded ( 1..31)
+* `%F`: Equivalent to %Y-%m-%d (the ISO 8601 date format)
+* `%h`: Equivalent to %b
+* `%H`: Hour of the day, 24-hour clock (00..23)
+* `%I`: Hour of the day, 12-hour clock (01..12)
+* `%j`: Day of the year (001..366)
+* `%k`: Hour, 24-hour clock, blank-padded ( 0..23)
+* `%l`: Hour, 12-hour clock, blank-padded ( 0..12)
+* `%L`: Millisecond of the second (000..999)
+* `%m`: Month of the year (01..12)
+* `%M`: Minute of the hour (00..59)
+* `%n`: Newline (\n)
+* `%N`: Fractional seconds digits, default is 9 digits (nanosecond)
+  * `%3N`: Millisecond (3 digits)
+  * `%6N`: Microsecond (6 digits)
+  * `%9N`: Nanosecond (9 digits)
+* `%p`: Meridian indicator (&#39;AM&#39;  or  &#39;PM&#39;)
+* `%P`: Meridian indicator (&#39;am&#39;  or  &#39;pm&#39;)
+* `%r`: Time, 12-hour (same as %I:%M:%S %p)
+* `%R`: Time, 24-hour (%H:%M)
+* `%s`: Number of seconds since 1970-01-01 00:00:00 UTC.
+* `%S`: Second of the minute (00..60)
+* `%t`: Tab character (     )
+* `%T`: Time, 24-hour (%H:%M:%S)
+* `%u`: Day of the week as a decimal, Monday being 1. (1..7)
+* `%U`: Week  number  of the current year, starting with the first Sunday as the first day of the first week (00..53)
+* `%v`: VMS date (%e-%b-%Y)
+* `%V`: Week number of year according to ISO 8601 (01..53)
+* `%W`: Week  number of the current year, starting with the first Monday as the first day of the first week (00..53)
+* `%w`: Day of the week (Sunday is 0, 0..6)
+* `%x`: Preferred representation for the date alone, no time
+* `%X`: Preferred representation for the time alone, no date
+* `%y`: Year without a century (00..99)
+* `%Y`: Year with century
+* `%z`: Time zone as  hour offset from UTC (e.g. +0900)
+* `%Z`: Time zone name
+* `%%`: Literal &#39;%&#39; character</pre>
+<ul><li>
+<p><code>strip</code>: This function removes leading and trailing whitespace
+from a string or from every string inside an array. For example,
+<code>strip(&quot;    aaa   &quot;)</code> results in “aaa”. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>suffix</code>: This function applies a suffix to all elements in an
+array. For example, <code>suffix(['a','b','c'], &#39;p&#39;)</code> returns
+[&#39;ap&#39;,&#39;bp&#39;,&#39;cp&#39;]. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>swapcase</code>: This function swaps the existing case of a string.
+For example, <code>swapcase(&quot;aBcD&quot;)</code> results in “AbCd”.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>time</code>: This function returns the current time since epoch as an
+integer. For example, <code>time()</code> returns something like
+&#39;1311972653&#39;. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>to_bytes</code>: Converts the argument into bytes, for example 4 kB
+becomes 4096. Takes a single string value as an argument. <em>Type</em>:
+rvalue</p>
+</li><li>
+<p><code>type</code>: Returns the type when passed a variable. Type can be a
+string, array, hash, float, integer, or boolean. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>union</code>: This function returns a union of two arrays. For
+example,
+<code>union(["a","b","c"],[&quot;b&quot;,&quot;c&quot;,&quot;d&quot;])</code>
+returns [“a”,“b”,“c”,“d”].</p>
+</li><li>
+<p><code>unique</code>: This function removes duplicates from strings and
+arrays. For example, <code>unique(&quot;aabbcc&quot;)</code> returns
+&#39;abc&#39;.</p>
+</li></ul>
+
+<p>You can also use this with arrays. For example,
+<code>unique(["a","a","b","b","c","c"])</code> returns [“a”,“b”,“c”].
+<em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>upcase</code>: Converts a string or an array of strings to uppercase.
+For example, <code>upcase(&quot;abcd&quot;)</code> returns &#39;ABCD&#39;.
+<em>Type</em>: rvalue</p>
+</li><li>
+<p><code>uriescape</code>: Urlencodes a string or array of strings. Requires
+either a single string or an array as an input. <em>Type</em>: rvalue</p>
+</li><li>
+<p><code>validate_absolute_path</code>: Validate that the string represents an
+absolute path in the filesystem. This function works for Windows and
+Unix-style paths.  The following values will pass:</p>
+</li></ul>
+
+<p><code>   $my_path = &quot;C:/Program Files (x86)/Puppet Labs/Puppet&quot;  
+validate_absolute_path($my_path)   $my_path2 = &quot;/var/lib/puppet&quot; 
+validate_absolute_path($my_path2) </code></p>
+
+<p>The following values will fail, causing compilation to abort:</p>
+
+<p><code>   validate_absolute_path(true)   validate_absolute_path([
+&#39;var/lib/puppet&#39;, &#39;/var/foo&#39; ])   validate_absolute_path([
+&#39;/var/lib/puppet&#39;, &#39;var/foo&#39; ])   $undefined = undef  
+validate_absolute_path($undefined) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_array</code>: Validate that all passed values are array data
+structures. Abort catalog compilation if any value fails this check.</p>
+</li></ul>
+
+<p>The following values will pass:</p>
+
+<p><code>   $my_array = [ &#39;one&#39;, &#39;two&#39; ]  
+validate_array($my_array) </code></p>
+
+<p>The following values will fail, causing compilation to abort:</p>
+
+<p><code>   validate_array(true)   validate_array(&#39;some_string&#39;)  
+$undefined = undef   validate_array($undefined) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_augeas</code>: Performs validation of a string using an
+Augeas lens. The first argument of this function should be the string to
+test, and the second argument should be the name of the Augeas lens to use.
+If Augeas fails to parse the string with the lens, the compilation aborts
+with a parse error.</p>
+</li></ul>
+
+<p>A third optional argument lists paths which should <strong>not</strong> be
+found in the file. The <code>$file</code> variable points to the location
+of the temporary file being tested in the Augeas tree.</p>
+
+<p>For example, to make sure your passwd content never contains user
+<code>foo</code>:</p>
+
+<p><code>   validate_augeas($passwdcontent, &#39;Passwd.lns&#39;,
+[&#39;$file/foo&#39;]) </code></p>
+
+<p>To ensure that no users use the &#39;/bin/barsh&#39; shell:</p>
+
+<p><code>   validate_augeas($passwdcontent, &#39;Passwd.lns&#39;,
+[&#39;$file/*[shell="/bin/barsh"]&#39;] </code></p>
+
+<p>You can pass a fourth argument as the error message raised and shown to the
+user:</p>
+
+<p><code>   validate_augeas($sudoerscontent, &#39;Sudoers.lns&#39;, [],
+&#39;Failed to validate sudoers content with Augeas&#39;) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_bool</code>: Validate that all passed values are either true
+or false. Abort catalog compilation if any value fails this check.</p>
+</li></ul>
+
+<p>The following values will pass:</p>
+
+<p><code>   $iamtrue = true   validate_bool(true)   validate_bool(true, true,
+false, $iamtrue) </code></p>
+
+<p>The following values will fail, causing compilation to abort:</p>
+
+<p><code>   $some_array = [ true ]   validate_bool(&quot;false&quot;)  
+validate_bool(&quot;true&quot;)   validate_bool($some_array) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_cmd</code>: Performs validation of a string with an external
+command. The first argument of this function should be the string to test,
+and the second argument should be the path to a test command taking a file
+as last argument. If the command, launched against a tempfile containing
+the passed string, returns a non-null value, compilation aborts with a
+parse error.</p>
+</li></ul>
+
+<p>You can pass a third argument as the error message raised and shown to the
+user:</p>
+
+<p><code>   validate_cmd($sudoerscontent, &#39;/usr/sbin/visudo -c -f&#39;,
+&#39;Visudo failed to validate sudoers content&#39;) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_hash</code>: Validates that all passed values are hash data
+structures. Abort catalog compilation if any value fails this check.</p>
+</li></ul>
+
+<p>The following values will pass:</p>
+
+<p><code>   $my_hash = { &#39;one&#39; =&gt; &#39;two&#39; }  
+validate_hash($my_hash) </code></p>
+
+<p>The following values will fail, causing compilation to abort:</p>
+
+<p><code>   validate_hash(true)   validate_hash(&#39;some_string&#39;)  
+$undefined = undef   validate_hash($undefined) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_re</code>: Performs simple validation of a string against
+one or more regular expressions. The first argument of this function should
+be the string to test, and the second argument should be a stringified
+regular expression (without the // delimiters) or an array of regular
+expressions. If none of the regular expressions match the string passed in,
+compilation aborts with a parse error.</p>
+</li></ul>
+
+<p>You can pass a third argument as the error message raised and shown to the
+user.</p>
+
+<p>The following strings validate against the regular expressions:</p>
+
+<p><code>   validate_re(&#39;one&#39;, &#39;^one$&#39;)  
+validate_re(&#39;one&#39;, [ &#39;^one&#39;, &#39;^two&#39; ]) </code></p>
+
+<p>The following string fails to validate, causing compilation to abort:</p>
+
+<p><code>   validate_re(&#39;one&#39;, [ &#39;^two&#39;, &#39;^three&#39; ])
+</code></p>
+
+<p>To set the error message:</p>
+
+<p><code>   validate_re($::puppetversion, &#39;^2.7&#39;, &#39;The
+$puppetversion fact value does not match 2.7&#39;) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_slength</code>: Validates that the first argument is a
+string (or an array of strings), and is less than or equal to the length of
+the second argument. It fails if the first argument is not a string or
+array of strings, or if arg 2 is not convertable to a number.</p>
+</li></ul>
+
+<p>The following values pass:</p>
+
+<p><code>   validate_slength(&quot;discombobulate&quot;,17)  
+validate_slength(["discombobulate","moo"],17) </code></p>
+
+<p>The following values fail:</p>
+
+<p><code>   validate_slength(&quot;discombobulate&quot;,1)  
+validate_slength(["discombobulate","thermometer"],5) </code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>validate_string</code>: Validates that all passed values are string
+data structures. Aborts catalog compilation if any value fails this check.</p>
+</li></ul>
+
+<p>The following values pass:</p>
+
+<p><code>   $my_string = &quot;one two&quot;   validate_string($my_string,
+&#39;three&#39;) </code></p>
+
+<p>The following values fail, causing compilation to abort:</p>
+
+<p><code>   validate_string(true)   validate_string([ &#39;some&#39;,
+&#39;array&#39; ])   $undefined = undef   validate_string($undefined)
+</code></p>
+
+<p><em>Type</em>: statement</p>
+<ul><li>
+<p><code>values</code>: When given a hash, this function returns the values of
+that hash.</p>
+</li></ul>
+
+<p><em>Examples:</em></p>
+
+<p><code>   $hash = {     &#39;a&#39; =&gt; 1,     &#39;b&#39; =&gt; 2,    
+&#39;c&#39; =&gt; 3,   }   values($hash) </code></p>
+
+<p>The example above returns [1,2,3].</p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>values_at</code>: Finds value inside an array based on location. The
+first argument is the array you want to analyze, and the second element can
+be a combination of:</p>
+</li><li>
+<p>A single numeric index</p>
+</li><li>
+<p>A range in the form of &#39;start-stop&#39; (eg. 4-9)</p>
+</li><li>
+<p>An array combining the above</p>
+</li></ul>
+
+<p>For example, <code>values_at(['a','b','c'], 2)</code> returns
+[&#39;c&#39;]; <code>values_at(['a','b','c'], [&quot;0-1&quot;])</code>
+returns [&#39;a&#39;,&#39;b&#39;]; and
+<code>values_at(['a','b','c','d','e'], [0, &quot;2-3&quot;])</code> returns
+[&#39;a&#39;,&#39;c&#39;,&#39;d&#39;].</p>
+
+<p><em>Type</em>: rvalue</p>
+<ul><li>
+<p><code>zip</code>: Takes one element from first array and merges
+corresponding elements from second array. This generates a sequence of
+n-element arrays, where n is one more than the count of arguments. For
+example,
+<code>zip(['1','2','3'],[&#39;4&#39;,&#39;5&#39;,&#39;6&#39;])</code>
+results in [“1”, “4”], [“2”, “5”], [“3”, “6”]. <em>Type</em>: rvalue</p>
+</li></ul>
+
+<h2 id="label-Limitations">Limitations<span><a href="#label-Limitations">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<h3 id="label-Version+Compatibility">Version Compatibility<span><a href="#label-Version+Compatibility">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Versions | Puppet 2.6 | Puppet 2.7 | Puppet 3.x | Puppet 4.x |
+:—————|:—–:|:—:|:—:|:—-: <strong>stdlib 2.x</strong> | <strong>yes</strong>
+| <strong>yes</strong> | no | no <strong>stdlib 3.x</strong> | no |
+<strong>yes</strong> | <strong>yes</strong> | no <strong>stdlib
+4.x</strong> | no | <strong>yes</strong> | <strong>yes</strong> | no
+<strong>stdlib 5.x</strong> | no | no | <strong>yes</strong> |
+<strong>yes</strong></p>
+
+<p><strong>stdlib 5.x</strong>: When released, stdlib 5.x will drop support
+for Puppet 2.7.x. Please see <a
+href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/176#issuecomment-30251414">this
+discussion</a>.</p>
+
+<h2 id="label-Development">Development<span><a href="#label-Development">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Puppet Labs modules on the Puppet Forge are open projects, and community
+contributions are essential for keeping them great. We can’t access the
+huge number of platforms and myriad of hardware, software, and deployment
+configurations that Puppet is intended to serve.</p>
+
+<p>We want to keep it as easy as possible to contribute changes so that our
+modules work in your environment. There are a few guidelines that we need
+contributors to follow so that we can have a chance of keeping on top of
+things.</p>
+
+<p>You can read the complete module contribution guide on the <a
+href="http://projects.puppetlabs.com/projects/module-site/wiki/Module_contributing">Puppet
+Labs wiki</a>.</p>
+
+<p>To report or research a bug with any part of this module, please go to <a
+href="http://tickets.puppetlabs.com/browse/PUP">tickets.puppetlabs.com/browse/PUP</a>.</p>
+
+<h2 id="label-Contributors">Contributors<span><a href="#label-Contributors">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>The list of contributors can be found at: <a
+href="https://github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors">github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors</a></p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

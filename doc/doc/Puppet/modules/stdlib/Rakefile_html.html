@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Rakefile.html - RDoc Documentation</title>
+
+<link href="../../../../fonts.css" rel="stylesheet">
+<link href="../../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+</script>
+
+<script src="../../../../js/jquery.js"></script>
+<script src="../../../../js/navigation.js"></script>
+<script src="../../../../js/search_index.js"></script>
+<script src="../../../../js/search.js"></script>
+<script src="../../../../js/searcher.js"></script>
+<script src="../../../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../Vagrantfile.html">Vagrantfile</a>
+  
+    <li><a href="../../../../app/index_php.html">index.php</a>
+  
+    <li><a href="../../../../doc/AlsoString_html.html">AlsoString.html</a>
+  
+    <li><a href="../../../../doc/Class_html.html">Class.html</a>
+  
+    <li><a href="../../../../doc/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../../../doc/Dir_html.html">Dir.html</a>
+  
+    <li><a href="../../../../doc/Facter_html.html">Facter.html</a>
+  
+    <li><a href="../../../../doc/Facter/Util_html.html">Util.html</a>
+  
+    <li><a href="../../../../doc/Facter/Util/DotD_html.html">DotD.html</a>
+  
+    <li><a href="../../../../doc/Facter/Util/PuppetSettings_html.html">PuppetSettings.html</a>
+  
+    <li><a href="../../../../doc/Facter/Util/RootHome_html.html">RootHome.html</a>
+  
+    <li><a href="../../../../doc/HavePrintedMatcher_html.html">HavePrintedMatcher.html</a>
+  
+    <li><a href="../../../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li><a href="../../../../doc/Object_html.html">Object.html</a>
+  
+    <li><a href="../../../../doc/Puppet_html.html">Puppet.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser_html.html">Parser.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser/Functions_html.html">Functions.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser/Functions/Augeas_html.html">Augeas.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser/Functions/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser/Functions/IPAddr_html.html">IPAddr.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Parser/Functions/YAML_html.html">YAML.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Resource_html.html">Resource.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Type_html.html">Type.html</a>
+  
+    <li><a href="../../../../doc/Puppet/Util_html.html">Util.html</a>
+  
+    <li><a href="../../../../doc/Puppet/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/mysql/files/my_cnf_html.html">my_cnf.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/mysql/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/nginx/files/127_0_0_1_html.html">127_0_0_1.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/nginx/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/php/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/CONTRIBUTING_md_html.html">CONTRIBUTING_md.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/LICENSE_html.html">LICENSE.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/README_DEVELOPER_markdown_html.html">README_DEVELOPER_markdown.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/README_SPECS_markdown_html.html">README_SPECS_markdown.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/README_markdown_html.html">README_markdown.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/RELEASE_PROCESS_markdown_html.html">RELEASE_PROCESS_markdown.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/checksums_json_html.html">checksums_json.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/manifests/stages_pp_html.html">stages_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/metadata_json_html.html">metadata_json.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/spec/spec_opts_html.html">spec_opts.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/tests/file_line_pp_html.html">file_line_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/tests/has_interface_with_pp_html.html">has_interface_with_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/tests/has_ip_address_pp_html.html">has_ip_address_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/tests/has_ip_network_pp_html.html">has_ip_network_pp.html</a>
+  
+    <li><a href="../../../../doc/Puppet/modules/stdlib/tests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec_html.html">PuppetSpec.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Compiler_html.html">Compiler.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Files_html.html">Files.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Fixtures_html.html">Fixtures.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Modules_html.html">Modules.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Pops_html.html">Pops.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Scope_html.html">Scope.html</a>
+  
+    <li><a href="../../../../doc/PuppetSpec/Settings_html.html">Settings.html</a>
+  
+    <li><a href="../../../../doc/PuppetlabsSpec_html.html">PuppetlabsSpec.html</a>
+  
+    <li><a href="../../../../doc/RSpec_html.html">RSpec.html</a>
+  
+    <li><a href="../../../../doc/RSpec/Core_html.html">Core.html</a>
+  
+    <li><a href="../../../../doc/RSpec/Matchers_html.html">Matchers.html</a>
+  
+    <li><a href="../../../../doc/RSpec/Matchers/BlockAliases_html.html">BlockAliases.html</a>
+  
+    <li><a href="../../../../doc/StubModule_html.html">StubModule.html</a>
+  
+    <li><a href="../../../../doc/Vagrantfile_html.html">Vagrantfile.html</a>
+  
+    <li><a href="../../../../doc/app/index_php_html.html">index_php.html</a>
+  
+    <li><a href="../../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li><a href="../../../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../../../doc/js/search_js.html">search.js</a>
+  
+    <li><a href="../../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../../../puppet/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../../puppet/modules/mysql/files/my_cnf.html">my.cnf</a>
+  
+    <li><a href="../../../../puppet/modules/mysql/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../../puppet/modules/nginx/files/127_0_0_1.html">127.0.0.1</a>
+  
+    <li><a href="../../../../puppet/modules/nginx/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../../puppet/modules/php/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/README_markdown.html">README.markdown</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/README_DEVELOPER_markdown.html">README_DEVELOPER.markdown</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/README_SPECS_markdown.html">README_SPECS.markdown</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/RELEASE_PROCESS_markdown.html">RELEASE_PROCESS.markdown</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/checksums_json.html">checksums.json</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/manifests/stages_pp.html">stages.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/metadata_json.html">metadata.json</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/tests/file_line_pp.html">file_line.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/tests/has_interface_with_pp.html">has_interface_with.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/tests/has_ip_address_pp.html">has_ip_address.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/tests/has_ip_network_pp.html">has_ip_network.pp</a>
+  
+    <li><a href="../../../../puppet/modules/stdlib/tests/init_pp.html">init.pp</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page doc/Puppet/modules/stdlib/Rakefile.html">
+
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;Rakefile - RDoc Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“../../../rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;../../../&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“../../../js/jquery.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../../js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../../js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../../js/search.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../../js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../../js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body class=“file”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;../../../index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;../../../table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;../../../table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../Vagrantfile.html&quot;&gt;Vagrantfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../app/index_php.html&quot;&gt;index.php&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/manifests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/mysql/files/my_cnf.html&quot;&gt;my.cnf&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/mysql/manifests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/nginx/files/127_0_0_1.html&quot;&gt;127.0.0.1&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/nginx/manifests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/php/manifests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/CHANGELOG_md.html&quot;&gt;CHANGELOG&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/CONTRIBUTING_md.html&quot;&gt;CONTRIBUTING&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/LICENSE.html&quot;&gt;LICENSE&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/README_markdown.html&quot;&gt;README.markdown&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/README_DEVELOPER_markdown.html&quot;&gt;README_DEVELOPER.markdown&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/README_SPECS_markdown.html&quot;&gt;README_SPECS.markdown&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/RELEASE_PROCESS_markdown.html&quot;&gt;RELEASE_PROCESS.markdown&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/checksums_json.html&quot;&gt;checksums.json&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/manifests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/manifests/stages_pp.html&quot;&gt;stages.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/metadata_json.html&quot;&gt;metadata.json&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/spec/spec_opts.html&quot;&gt;spec.opts&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/tests/file_line_pp.html&quot;&gt;file_line.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/tests/has_interface_with_pp.html&quot;&gt;has_interface_with.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/tests/has_ip_address_pp.html&quot;&gt;has_ip_address.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/tests/has_ip_network_pp.html&quot;&gt;has_ip_network.pp&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../../puppet/modules/stdlib/tests/init_pp.html&quot;&gt;init.pp&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../AlsoString.html&quot;&gt;AlsoString&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Class.html&quot;&gt;Class&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Digest.html&quot;&gt;Digest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Dir.html&quot;&gt;Dir&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Facter.html&quot;&gt;Facter&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Facter/Util.html&quot;&gt;Facter::Util&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Facter/Util/DotD.html&quot;&gt;Facter::Util::DotD&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Facter/Util/PuppetSettings.html&quot;&gt;Facter::Util::PuppetSettings&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Facter/Util/RootHome.html&quot;&gt;Facter::Util::RootHome&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../HavePrintedMatcher.html&quot;&gt;HavePrintedMatcher&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Kernel.html&quot;&gt;Kernel&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Object.html&quot;&gt;Object&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet.html&quot;&gt;Puppet&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser.html&quot;&gt;Puppet::Parser&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser/Functions.html&quot;&gt;Puppet::Parser::Functions&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser/Functions/Augeas.html&quot;&gt;Puppet::Parser::Functions::Augeas&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser/Functions/Digest.html&quot;&gt;Puppet::Parser::Functions::Digest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser/Functions/IPAddr.html&quot;&gt;Puppet::Parser::Functions::IPAddr&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Parser/Functions/YAML.html&quot;&gt;Puppet::Parser::Functions::YAML&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Resource.html&quot;&gt;Puppet::Resource&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Type.html&quot;&gt;Puppet::Type&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../Puppet/Util.html&quot;&gt;Puppet::Util&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec.html&quot;&gt;PuppetSpec&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Compiler.html&quot;&gt;PuppetSpec::Compiler&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Files.html&quot;&gt;PuppetSpec::Files&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Fixtures.html&quot;&gt;PuppetSpec::Fixtures&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Modules.html&quot;&gt;PuppetSpec::Modules&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Pops.html&quot;&gt;PuppetSpec::Pops&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Scope.html&quot;&gt;PuppetSpec::Scope&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetSpec/Settings.html&quot;&gt;PuppetSpec::Settings&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../PuppetlabsSpec.html&quot;&gt;PuppetlabsSpec&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../RSpec.html&quot;&gt;RSpec&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../RSpec/Core.html&quot;&gt;RSpec::Core&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../RSpec/Matchers.html&quot;&gt;RSpec::Matchers&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../RSpec/Matchers/BlockAliases.html&quot;&gt;RSpec::Matchers::BlockAliases&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../../StubModule.html&quot;&gt;StubModule&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation” class=“description”&gt;</p>
+
+<p>&lt;p&gt;require &amp;#39;rubygems&amp;#39; require
+&amp;#39;puppetlabs_spec_helper/rake_tasks&amp;#39; require
+&amp;#39;puppet-lint/tasks/puppet-lint&amp;#39;
+PuppetLint.configuration.send(&amp;#39;disable_80chars&amp;#39;)
+PuppetLint.configuration.ignore_paths = [“spec     .pp”, “pkg/  
+*.pp”]&lt;/p&gt;</p>
+
+<p>&lt;p&gt;desc “Validate manifests, templates, and ruby files in lib.” task
+:validate do&lt;/p&gt;</p>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span
+class=“ruby-constant”&gt;Dir&lt;/span&gt;[&lt;span
+class=“ruby-string”&gt;&amp;#39;manifests/  
+*.pp&amp;#39;&lt;/span&gt;].&lt;span
+class=“ruby-identifier”&gt;each&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;do&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;manifest&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;puppet parser validate --noop #{manifest}&amp;quot;&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt; &lt;span
+class=“ruby-constant”&gt;Dir&lt;/span&gt;[&lt;span
+class=“ruby-string”&gt;&amp;#39;lib   /*.rb&amp;#39;&lt;/span&gt;].&lt;span
+class=“ruby-identifier”&gt;each&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;do&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;lib_file&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;ruby -c #{lib_file}&amp;quot;&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt; &lt;span
+class=“ruby-constant”&gt;Dir&lt;/span&gt;[&lt;span
+class=“ruby-string”&gt;&amp;#39;templates/  
+*.erb&amp;#39;&lt;/span&gt;].&lt;span
+class=“ruby-identifier”&gt;each&lt;/span&gt; &lt;span
+class=“ruby-keyword”&gt;do&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;template&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;|&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;erb -P -x -T &amp;#39;-&amp;#39; #{template} | ruby -c&amp;quot;&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt; &lt;/pre&gt;</p>
+
+<p>&lt;p&gt;end&lt;/p&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.0.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

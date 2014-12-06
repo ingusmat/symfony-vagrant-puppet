@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module PuppetSpec::Compiler - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-apply_compiled_manifest">#apply_compiled_manifest</a>
+    
+    <li ><a href="#method-i-compile_to_catalog">#compile_to_catalog</a>
+    
+    <li ><a href="#method-i-compile_to_ral">#compile_to_ral</a>
+    
+    <li ><a href="#method-i-compile_to_relationship_graph">#compile_to_relationship_graph</a>
+    
+    <li ><a href="#method-i-order_resources_traversed_in">#order_resources_traversed_in</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-PuppetSpec::Compiler">
+  <h1 id="module-PuppetSpec::Compiler" class="module">
+    module PuppetSpec::Compiler
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-apply_compiled_manifest" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_compiled_manifest</span><span
+            class="method-args">(manifest, prioritizer = Puppet::Graph::SequentialPrioritizer.new)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="apply_compiled_manifest-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/spec/lib/puppet_spec/compiler.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_compiled_manifest</span>(<span class="ruby-identifier">manifest</span>, <span class="ruby-identifier">prioritizer</span> = <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span><span class="ruby-operator">::</span><span class="ruby-constant">SequentialPrioritizer</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">transaction</span> = <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Transaction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">compile_to_ral</span>(<span class="ruby-identifier">manifest</span>),
+                                      <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Transaction</span><span class="ruby-operator">::</span><span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;apply&quot;</span>),
+                                      <span class="ruby-identifier">prioritizer</span>)
+  <span class="ruby-identifier">transaction</span>.<span class="ruby-identifier">evaluate</span>
+  <span class="ruby-identifier">transaction</span>.<span class="ruby-identifier">report</span>.<span class="ruby-identifier">finalize_report</span>
+
+  <span class="ruby-identifier">transaction</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-compile_to_catalog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compile_to_catalog</span><span
+            class="method-args">(string, node = Puppet::Node.new('foonode'))</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="compile_to_catalog-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/spec/lib/puppet_spec/compiler.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compile_to_catalog</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">node</span> = <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;foonode&#39;</span>))
+  <span class="ruby-constant">Puppet</span>[<span class="ruby-value">:code</span>] = <span class="ruby-identifier">string</span>
+  <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span><span class="ruby-operator">::</span><span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">node</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-compile_to_ral" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compile_to_ral</span><span
+            class="method-args">(manifest)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="compile_to_ral-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/spec/lib/puppet_spec/compiler.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compile_to_ral</span>(<span class="ruby-identifier">manifest</span>)
+  <span class="ruby-identifier">catalog</span> = <span class="ruby-identifier">compile_to_catalog</span>(<span class="ruby-identifier">manifest</span>)
+  <span class="ruby-identifier">ral</span> = <span class="ruby-identifier">catalog</span>.<span class="ruby-identifier">to_ral</span>
+  <span class="ruby-identifier">ral</span>.<span class="ruby-identifier">finalize</span>
+  <span class="ruby-identifier">ral</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-compile_to_relationship_graph" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compile_to_relationship_graph</span><span
+            class="method-args">(manifest, prioritizer = Puppet::Graph::SequentialPrioritizer.new)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="compile_to_relationship_graph-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/spec/lib/puppet_spec/compiler.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compile_to_relationship_graph</span>(<span class="ruby-identifier">manifest</span>, <span class="ruby-identifier">prioritizer</span> = <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span><span class="ruby-operator">::</span><span class="ruby-constant">SequentialPrioritizer</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-identifier">ral</span> = <span class="ruby-identifier">compile_to_ral</span>(<span class="ruby-identifier">manifest</span>)
+  <span class="ruby-identifier">graph</span> = <span class="ruby-constant">Puppet</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span><span class="ruby-operator">::</span><span class="ruby-constant">RelationshipGraph</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">prioritizer</span>)
+  <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">populate_from</span>(<span class="ruby-identifier">ral</span>)
+  <span class="ruby-identifier">graph</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-order_resources_traversed_in" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">order_resources_traversed_in</span><span
+            class="method-args">(relationships)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="order_resources_traversed_in-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/spec/lib/puppet_spec/compiler.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">order_resources_traversed_in</span>(<span class="ruby-identifier">relationships</span>)
+  <span class="ruby-identifier">order_seen</span> = []
+  <span class="ruby-identifier">relationships</span>.<span class="ruby-identifier">traverse</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">resource</span><span class="ruby-operator">|</span> <span class="ruby-identifier">order_seen</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">ref</span> }
+  <span class="ruby-identifier">order_seen</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

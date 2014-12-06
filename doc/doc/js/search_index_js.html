@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Vagrantfile.html">Vagrantfile</a>
+  
+    <li><a href="../../app/index_php.html">index.php</a>
+  
+    <li><a href="../../doc/AlsoString_html.html">AlsoString.html</a>
+  
+    <li><a href="../../doc/Class_html.html">Class.html</a>
+  
+    <li><a href="../../doc/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../doc/Dir_html.html">Dir.html</a>
+  
+    <li><a href="../../doc/Facter_html.html">Facter.html</a>
+  
+    <li><a href="../../doc/Facter/Util_html.html">Util.html</a>
+  
+    <li><a href="../../doc/Facter/Util/DotD_html.html">DotD.html</a>
+  
+    <li><a href="../../doc/Facter/Util/PuppetSettings_html.html">PuppetSettings.html</a>
+  
+    <li><a href="../../doc/Facter/Util/RootHome_html.html">RootHome.html</a>
+  
+    <li><a href="../../doc/HavePrintedMatcher_html.html">HavePrintedMatcher.html</a>
+  
+    <li><a href="../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li><a href="../../doc/Puppet_html.html">Puppet.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser_html.html">Parser.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser/Functions_html.html">Functions.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser/Functions/Augeas_html.html">Augeas.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser/Functions/Digest_html.html">Digest.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser/Functions/IPAddr_html.html">IPAddr.html</a>
+  
+    <li><a href="../../doc/Puppet/Parser/Functions/YAML_html.html">YAML.html</a>
+  
+    <li><a href="../../doc/Puppet/Resource_html.html">Resource.html</a>
+  
+    <li><a href="../../doc/Puppet/Type_html.html">Type.html</a>
+  
+    <li><a href="../../doc/Puppet/Util_html.html">Util.html</a>
+  
+    <li><a href="../../doc/Puppet/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/mysql/files/my_cnf_html.html">my_cnf.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/mysql/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/nginx/files/127_0_0_1_html.html">127_0_0_1.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/nginx/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/php/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/CONTRIBUTING_md_html.html">CONTRIBUTING_md.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/LICENSE_html.html">LICENSE.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/README_DEVELOPER_markdown_html.html">README_DEVELOPER_markdown.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/README_SPECS_markdown_html.html">README_SPECS_markdown.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/README_markdown_html.html">README_markdown.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/RELEASE_PROCESS_markdown_html.html">RELEASE_PROCESS_markdown.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/checksums_json_html.html">checksums_json.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/manifests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/manifests/stages_pp_html.html">stages_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/metadata_json_html.html">metadata_json.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/spec/spec_opts_html.html">spec_opts.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/tests/file_line_pp_html.html">file_line_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/tests/has_interface_with_pp_html.html">has_interface_with_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/tests/has_ip_address_pp_html.html">has_ip_address_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/tests/has_ip_network_pp_html.html">has_ip_network_pp.html</a>
+  
+    <li><a href="../../doc/Puppet/modules/stdlib/tests/init_pp_html.html">init_pp.html</a>
+  
+    <li><a href="../../doc/PuppetSpec_html.html">PuppetSpec.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Compiler_html.html">Compiler.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Files_html.html">Files.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Fixtures_html.html">Fixtures.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Modules_html.html">Modules.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Pops_html.html">Pops.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Scope_html.html">Scope.html</a>
+  
+    <li><a href="../../doc/PuppetSpec/Settings_html.html">Settings.html</a>
+  
+    <li><a href="../../doc/PuppetlabsSpec_html.html">PuppetlabsSpec.html</a>
+  
+    <li><a href="../../doc/RSpec_html.html">RSpec.html</a>
+  
+    <li><a href="../../doc/RSpec/Core_html.html">Core.html</a>
+  
+    <li><a href="../../doc/RSpec/Matchers_html.html">Matchers.html</a>
+  
+    <li><a href="../../doc/RSpec/Matchers/BlockAliases_html.html">BlockAliases.html</a>
+  
+    <li><a href="../../doc/StubModule_html.html">StubModule.html</a>
+  
+    <li><a href="../../doc/Vagrantfile_html.html">Vagrantfile.html</a>
+  
+    <li><a href="../../doc/app/index_php_html.html">index_php.html</a>
+  
+    <li><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li><a href="../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../puppet/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../puppet/modules/mysql/files/my_cnf.html">my.cnf</a>
+  
+    <li><a href="../../puppet/modules/mysql/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../puppet/modules/nginx/files/127_0_0_1.html">127.0.0.1</a>
+  
+    <li><a href="../../puppet/modules/nginx/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../puppet/modules/php/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li><a href="../../puppet/modules/stdlib/CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
+    <li><a href="../../puppet/modules/stdlib/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../puppet/modules/stdlib/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../puppet/modules/stdlib/README_markdown.html">README.markdown</a>
+  
+    <li><a href="../../puppet/modules/stdlib/README_DEVELOPER_markdown.html">README_DEVELOPER.markdown</a>
+  
+    <li><a href="../../puppet/modules/stdlib/README_SPECS_markdown.html">README_SPECS.markdown</a>
+  
+    <li><a href="../../puppet/modules/stdlib/RELEASE_PROCESS_markdown.html">RELEASE_PROCESS.markdown</a>
+  
+    <li><a href="../../puppet/modules/stdlib/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../puppet/modules/stdlib/checksums_json.html">checksums.json</a>
+  
+    <li><a href="../../puppet/modules/stdlib/manifests/init_pp.html">init.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/manifests/stages_pp.html">stages.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/metadata_json.html">metadata.json</a>
+  
+    <li><a href="../../puppet/modules/stdlib/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../puppet/modules/stdlib/tests/file_line_pp.html">file_line.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/tests/has_interface_with_pp.html">has_interface_with.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/tests/has_ip_address_pp.html">has_ip_address.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/tests/has_ip_network_pp.html">has_ip_network.pp</a>
+  
+    <li><a href="../../puppet/modules/stdlib/tests/init_pp.html">init.pp</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page doc/js/search_index.js">
+
+<p>var search_data = {“index”:{“<a
+href=""alsostring","class","digest","dir","facter","util","dotd","puppetsettings","roothome","haveprintedmatcher","kernel","object","puppet","parser","functions","augeas","digest","ipaddr","yaml","resource","type","util","puppetspec","compiler","files","fixtures","modules","pops","scope","settings","puppetlabsspec","rspec","core","matchers","blockaliases","stubmodule","append_line()","apply_compiled_manifest()","cache_lookup()","cache_save!()","cache_store()","cache_time()","can_use_scratch_database?()","cleanup()","compile_to_catalog()","compile_to_ral()","compile_to_relationship_graph()","count_matches()","count_pending_tests_in()","count_test_types_in()","count_tests_in()","create()","create()","create()","create_test_scope_for_node()","description()","destroy()","entries()","exists?()","fact()","fact_type()","failure_message_for_should()","failure_message_for_should_not()","file_containing()","file_containing()","fixtures()","get_root_home()","get_tests()","handle_create_with_after()","handle_create_with_match()","have_printed()","is_future_parser_enabled?()","json_parser()","lines()","load_cache()","make_absolute()","make_absolute()","matches?()","my_fixture()","my_fixture_dir()","my_fixtures()","new()","new()","new()","order_resources_traversed_in()","original_require()","publicize_methods()","record_tmp()","refresh()","require()","scope()","script_parser()","setup_scratch_database()","sqlite?()","tmpdir()","tmpdir()","tmpfile()","tmpfile()","to_csv()","txt_parser()","valid_paths()","with_puppet()","with_verbose_disabled()","yaml_parser()","vagrantfile","index.php","created.rid","init.pp","my.cnf","init.pp","127.0.0.1","init.pp","init.pp","changelog","contributing","gemfile","license","readme.markdown","readme_developer.markdown","readme_specs.markdown","release_process.markdown","rakefile","checksums.json","init.pp","stages.pp","metadata.json","spec.opts","file_line.pp","has_interface_with.pp","has_ip_address.pp","has_ip_network.pp","init.pp"">searchIndex”:</a>,“<a
+href=""alsostring","class","digest","dir","facter","facter::util","facter::util::dotd","facter::util::puppetsettings","facter::util::roothome","haveprintedmatcher","kernel","object","puppet","puppet::parser","puppet::parser::functions","puppet::parser::functions::augeas","puppet::parser::functions::digest","puppet::parser::functions::ipaddr","puppet::parser::functions::yaml","puppet::resource","puppet::type","puppet::util","puppetspec","puppetspec::compiler","puppetspec::files","puppetspec::fixtures","puppetspec::modules","puppetspec::pops","puppetspec::scope","puppetspec::settings","puppetlabsspec","rspec","rspec::core","rspec::matchers","rspec::matchers::blockaliases","stubmodule","object#append_line()","puppetspec::compiler#apply_compiled_manifest()","facter::util::dotd#cache_lookup()","facter::util::dotd#cache_save!()","facter::util::dotd#cache_store()","facter::util::dotd#cache_time()","object#can_use_scratch_database?()","puppetspec::files::cleanup()","puppetspec::compiler#compile_to_catalog()","puppetspec::compiler#compile_to_ral()","puppetspec::compiler#compile_to_relationship_graph()","object#count_matches()","object#count_pending_tests_in()","object#count_test_types_in()","object#count_tests_in()","facter::util::dotd#create()","object#create()","puppetspec::modules::create()","puppetspec::scope#create_test_scope_for_node()","haveprintedmatcher#description()","object#destroy()","facter::util::dotd#entries()","object#exists?()","object#fact()","facter::util::dotd#fact_type()","haveprintedmatcher#failure_message_for_should()","haveprintedmatcher#failure_message_for_should_not()","puppetspec::files#file_containing()","puppetspec::files::file_containing()","puppetspec::fixtures#fixtures()","facter::util::roothome::get_root_home()","object#get_tests()","object#handle_create_with_after()","object#handle_create_with_match()","object#have_printed()","object#is_future_parser_enabled?()","facter::util::dotd#json_parser()","object#lines()","facter::util::dotd#load_cache()","puppetspec::files#make_absolute()","puppetspec::files::make_absolute()","haveprintedmatcher#matches?()","puppetspec::fixtures#my_fixture()","puppetspec::fixtures#my_fixture_dir()","puppetspec::fixtures#my_fixtures()","facter::util::dotd::new()","haveprintedmatcher::new()","stubmodule::new()","puppetspec::compiler#order_resources_traversed_in()","kernel#original_require()","class#publicize_methods()","puppetspec::files::record_tmp()","object#refresh()","kernel#require()","object#scope()","facter::util::dotd#script_parser()","object#setup_scratch_database()","object#sqlite?()","puppetspec::files::tmpdir()","puppetspec::files#tmpdir()","puppetspec::files::tmpfile()","puppetspec::files#tmpfile()","object#to_csv()","facter::util::dotd#txt_parser()","object::valid_paths()","facter::util::puppetsettings::with_puppet()","kernel#with_verbose_disabled()","facter::util::dotd#yaml_parser()","","","","","","","","","","","","","","","","","","","","","","","","","","","",""">longSearchIndex”:</a>,“<a
+href=""AlsoString","","AlsoString.html","",""">info”:[</a>,[“Class”,“”,“Class.html”,“”,“&lt;p&gt;Some
+monkey-patching to allow us to test private <a
+href=""Digest","","Digest.html","",""">methods.n”],</a>,[“<a
+href=""Facter","","Facter.html","",""">Dir”,“”,“Dir.html”,“”,“”],</a>,[“Facter::Util”,“”,“Facter/Util.html”,“”,“”],[“Facter::Util::DotD”,“”,“Facter/Util/DotD.html”,“”,“&lt;p&gt;A
+Facter plugin that loads facts from /etc/facter/facts.d
+andn/etc/puppetlabs/facter/facts.d.n&lt;p&gt;Facts can …<a
+href=”“Facter::Util::PuppetSettings”,“”,“Facter/Util/PuppetSettings.html”,“”,“”“>n”],</a>,[“Facter::Util::RootHome”,“”,“Facter/Util/RootHome.html”,“”,“&lt;p&gt;A
+facter fact to determine the root home directory. This varies on
+PEnsupported platforms and may be …<a
+href=”“HavePrintedMatcher”,“”,“HavePrintedMatcher.html”,“”,“”“>n”],</a>,[“Kernel”,“”,“Kernel.html”,“”,“&lt;p&gt;XXX
+Super ugly hack to keep from starting beaker nodesn&lt;p&gt;Support code
+for running stuff with warnings disabled. …<a
+href=”“Object”,“”,“Object.html”,“”,“”“>n”],</a>,[“<a
+href=""Puppet::Parser","","Puppet/Parser.html","",""">Puppet”,“”,“Puppet.html”,“”,“”],</a>,[“<a
+href=""Puppet::Parser::Functions::Augeas","","Puppet/Parser/Functions/Augeas.html","",""">:Parser::Functions”,“”,“Puppet/Parser/Functions.html”,“”,“<p>abs.rbn<p>any2array.rbn<p>bool2num.rbn”],</a>,[“<a
+href=""Puppet::Parser::Functions::IPAddr","","Puppet/Parser/Functions/IPAddr.html","",""">:Parser::Functions::Digest”,“”,“Puppet/Parser/Functions/Digest.html”,“”,“”],</a>,[“<a
+href=""Puppet::Resource","","Puppet/Resource.html","",""">:Parser::Functions::YAML”,“”,“Puppet/Parser/Functions/YAML.html”,“”,“”],</a>,[“<a
+href=""Puppet::Util","","Puppet/Util.html","",""">:Type”,“”,“Puppet/Type.html”,“”,“”],</a>,[“PuppetSpec”,“”,“PuppetSpec.html”,“”,“&lt;p&gt;So
+everyone else doesn&amp;#39;t have to include this base <a
+href=""PuppetSpec::Compiler","","PuppetSpec/Compiler.html","",""">constant.n”],</a>,[“PuppetSpec::Files”,“”,“PuppetSpec/Files.html”,“”,“&lt;p&gt;A
+support module for testing <a
+href=""PuppetSpec::Fixtures","","PuppetSpec/Fixtures.html","",""">files.n”],</a>,[“<a
+href=""PuppetSpec::Pops","","PuppetSpec/Pops.html","",""">:Modules”,“”,“PuppetSpec/Modules.html”,“”,“”],</a>,[“<a
+href=""PuppetSpec::Settings","","PuppetSpec/Settings.html","",""">:Scope”,“”,“PuppetSpec/Scope.html”,“”,“”],</a>,[“PuppetlabsSpec”,“”,“PuppetlabsSpec.html”,“”,“”],[“RSpec”,“”,“RSpec.html”,“”,“&lt;p&gt;Backward
+compatibility for Jenkins outdated <a
+href=""RSpec::Core","","RSpec/Core.html","",""">environment.n”],</a>,[“<a
+href=""RSpec::Matchers::BlockAliases","","RSpec/Matchers/BlockAliases.html","",""">:Matchers”,“”,“RSpec/Matchers.html”,“”,“”],</a>,[“StubModule”,“”,“StubModule.html”,“”,“”],[“append_line”,“Object”,“Object.html#method-i-append_line”,“()”,“&lt;p&gt;append
+the line to the file.n&lt;p&gt;@api
+privaten”],[“apply_compiled_manifest”,“PuppetSpec::Compiler”,“PuppetSpec/Compiler.html#method-i-apply_compiled_manifest”,“(manifest,
+prioritizer = <a
+href=""cache_lookup","Facter::Util::DotD","Facter/Util/DotD.html#method-i-cache_lookup","(file)",""">Puppet::Graph::SequentialPrioritizer.new)”,“”],</a>,[“cache_save!”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-i-cache_save-21”,“()”,“”],[“cache_store”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-i-cache_store”,“(file,
+<a
+href=""cache_time","Facter::Util::DotD","Facter/Util/DotD.html#method-i-cache_time","(file)",""">data)”,“”],</a>,[“<a
+href=""cleanup","PuppetSpec::Files","PuppetSpec/Files.html#method-c-cleanup","()",""">can_use_scratch_database?”,“Object”,“Object.html#method-i-can_use_scratch_database-3F”,“()”,“”],</a>,[“compile_to_catalog”,“PuppetSpec::Compiler”,“PuppetSpec/Compiler.html#method-i-compile_to_catalog”,“(string,
+node = <a
+href=""compile_to_ral","PuppetSpec::Compiler","PuppetSpec/Compiler.html#method-i-compile_to_ral","(manifest)",""">Puppet::Node.new(‘foonode’))”,“”],</a>,[“compile_to_relationship_graph”,“PuppetSpec::Compiler”,“PuppetSpec/Compiler.html#method-i-compile_to_relationship_graph”,“(manifest,
+prioritizer = <a
+href=""count_matches","Object","Object.html#method-i-count_matches","(regex)",""">Puppet::Graph::SequentialPrioritizer.new)”,“”],</a>,[“<a
+href=""count_test_types_in","Object","Object.html#method-i-count_test_types_in","(type,group)",""">count_pending_tests_in”,“Object”,“Object.html#method-i-count_pending_tests_in”,“(group)”,“”],</a>,[“<a
+href=""create","Facter::Util::DotD","Facter/Util/DotD.html#method-i-create","()",""">count_tests_in”,“Object”,“Object.html#method-i-count_tests_in”,“(group)”,“”],</a>,[“create”,“Object”,“Object.html#method-i-create”,“()”,“”],[“create”,“PuppetSpec::Modules”,“PuppetSpec/Modules.html#method-c-create”,“(name,
+dir, options =
+{})”,“”],[“create_test_scope_for_node”,“PuppetSpec::Scope”,“PuppetSpec/Scope.html#method-i-create_test_scope_for_node”,“(node_name)”,“&lt;p&gt;Initialize
+a new scope suitable for <a
+href=""description","HavePrintedMatcher","HavePrintedMatcher.html#method-i-description","()",""">testing.n”],</a>,[“<a
+href=""entries","Facter::Util::DotD","Facter/Util/DotD.html#method-i-entries","()",""">destroy”,“Object”,“Object.html#method-i-destroy”,“()”,“”],</a>,[“<a
+href=""fact","Object","Object.html#method-i-fact","(*args)",""">exists?”,“Object”,“Object.html#method-i-exists-3F”,“()”,“”],</a>,[“<a
+href=""failure_message_for_should","HavePrintedMatcher","HavePrintedMatcher.html#method-i-failure_message_for_should","()",""">fact_type”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-i-fact_type”,“(file)”,“”],</a>,[“failure_message_for_should_not”,“HavePrintedMatcher”,“HavePrintedMatcher.html#method-i-failure_message_for_should_not”,“()”,“”],[“file_containing”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-i-file_containing”,“(name,
+contents)”,“”],[“file_containing”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-c-file_containing”,“(name,
+<a
+href=""fixtures","PuppetSpec::Fixtures","PuppetSpec/Fixtures.html#method-i-fixtures","(*rest)",""">contents)”,“”],</a>,[“get_root_home”,“Facter::Util::RootHome”,“Facter/Util/RootHome.html#method-c-get_root_home”,“()”,“”],[“get_tests”,“Object”,“Object.html#method-i-get_tests”,“(children)”,“&lt;p&gt;Collect
+up tests and example groups into a <a
+href=""handle_create_with_after","Object","Object.html#method-i-handle_create_with_after","()",""">hashn”],</a>,[“<a
+href=""have_printed","Object","Object.html#method-i-have_printed","(what)",""">handle_create_with_match”,“Object”,“Object.html#method-i-handle_create_with_match”,“()”,“”],</a>,[“<a
+href=""json_parser","Facter::Util::DotD","Facter/Util/DotD.html#method-i-json_parser","(file)",""">is_future_parser_enabled?”,“Object”,“Object.html#method-i-is_future_parser_enabled-3F”,“()”,“”],</a>,[“<a
+href=""load_cache","Facter::Util::DotD","Facter/Util/DotD.html#method-i-load_cache","()",""">lines”,“Object”,“Object.html#method-i-lines”,“()”,“”],</a>,[“<a
+href=""make_absolute","PuppetSpec::Files","PuppetSpec/Files.html#method-c-make_absolute","(path)",""">make_absolute”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-i-make_absolute”,“(path)”,“”],</a>,[“<a
+href=""my_fixture","PuppetSpec::Fixtures","PuppetSpec/Fixtures.html#method-i-my_fixture","(name)",""">matches?”,“HavePrintedMatcher”,“HavePrintedMatcher.html#method-i-matches-3F”,“(block)”,“”],</a>,[“my_fixture_dir”,“PuppetSpec::Fixtures”,“PuppetSpec/Fixtures.html#method-i-my_fixture_dir”,“()”,“”],[“my_fixtures”,“PuppetSpec::Fixtures”,“PuppetSpec/Fixtures.html#method-i-my_fixtures”,“(glob
+= &#39;*&#39;, flags =
+0)”,“”],[“new”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-c-new”,“(dir=&quot;/etc/facts.d&quot;,
+<a
+href=""new","HavePrintedMatcher","HavePrintedMatcher.html#method-c-new","(expected)",""">cache_file="/tmp/facts_cache.yml")”,“”],</a>,[“<a
+href=""order_resources_traversed_in","PuppetSpec::Compiler","PuppetSpec/Compiler.html#method-i-order_resources_traversed_in","(relationships)",""">new”,“StubModule”,“StubModule.html#method-c-new”,“(path)”,“”],</a>,[“original_require”,“Kernel”,“Kernel.html#method-i-original_require”,“(name)”,“&lt;p&gt;make
+an alias of the original <a
+href=""publicize_methods","Class","Class.html#method-i-publicize_methods","(*methods)",""">requiren”],</a>,[“<a
+href=""refresh","Object","Object.html#method-i-refresh","()",""">record_tmp”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-c-record_tmp”,“(tmp)”,“”],</a>,[“require”,“Kernel”,“Kernel.html#method-i-require”,“(name)”,“&lt;p&gt;rewrite
+requiren”],[“scope”,“Object”,“Object.html#method-i-scope”,“(environment =
+"production")”,“”],[“script_parser”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-i-script_parser”,“(file)”,“”],[“setup_scratch_database”,“Object”,“Object.html#method-i-setup_scratch_database”,“()”,“&lt;p&gt;This
+is expected to be called in your `before :each` block, and will getnyou
+ready to roll with a serious
+…n”],[“sqlite?”,“Object”,“Object.html#method-i-sqlite-3F”,“()”,“&lt;p&gt;This
+just makes some nice things available at global scope, and for setupnof
+tests to use a real fake …<a
+href=”“tmpdir”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-c-tmpdir”,“(name)”,“”“>n”],</a>,[“tmpdir”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-i-tmpdir”,“(name)”,“”],[“tmpfile”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-c-tmpfile”,“(name,
+dir =
+nil)”,“”],[“tmpfile”,“PuppetSpec::Files”,“PuppetSpec/Files.html#method-i-tmpfile”,“(name,
+dir =
+nil)”,“”],[“to_csv”,“Object”,“Object.html#method-i-to_csv”,“(function_list,tests)”,“&lt;p&gt;Convert
+tests hash to csv <a
+href=""txt_parser","Facter::Util::DotD","Facter/Util/DotD.html#method-i-txt_parser","(file)",""">formatn”],</a>,[“valid_paths”,“Object”,“Object.html#method-c-valid_paths”,“()”,“”],[“with_puppet”,“Facter::Util::PuppetSettings”,“Facter/Util/PuppetSettings.html#method-c-with_puppet”,“()”,“&lt;p&gt;This
+method is intended to provide a convenient way to evaluate a Facterncode
+block only if Puppet is …<a
+href=”“with_verbose_disabled”,“Kernel”,“Kernel.html#method-i-with_verbose_disabled”,“()”,“”“>n”],</a>,[“yaml_parser”,“Facter::Util::DotD”,“Facter/Util/DotD.html#method-i-yaml_parser”,“(file)”,“”],[“Vagrantfile”,“”,“Vagrantfile.html”,“”,“&lt;p&gt;Vagrant.configure(“2”)
+do |config|nn&lt;pre&gt;config.vm.box =
+&amp;quot;hashicorp/precise32&amp;quot;nconfig.vm.network :forwarded_port,
+…&lt;/pre&gt;n”],[“index.php”,“”,“app/index_php.html”,“”,“&lt;p&gt;hello
+&amp;lt;?php <a
+href=""created.rid","","doc/created_rid.html","",""">phpinfo();n”],</a>,[“init.pp”,“”,“puppet/manifests/init_pp.html”,“”,“&lt;p&gt;exec
+{ &amp;#39;apt-get update&amp;#39;:nn&lt;pre
+class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-identifier&quot;&gt;path&lt;/span&gt; =&lt;span
+class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span
+class=&quot;ruby-string&quot;&gt;&amp;#39;/usr/bin&amp;#39;&lt;/span&gt;,n&lt;/pre&gt;n&lt;p&gt;}n”],[“my.cnf”,“”,“puppet/modules/mysql/files/my_cnf.html”,“”,“&lt;p&gt;#
+# The MySQL database server configuration file. # # You can copy this
+tonone of: # - “/etc/mysql/my.cnf”
+…n”],[“init.pp”,“”,“puppet/modules/mysql/manifests/init_pp.html”,“”,“&lt;p&gt;#
+vagrant/puppet/modules/mysql/manifests/init.pp class mysql {n&lt;p&gt;#
+Install mysqlnn&lt;pre&gt;package { [&amp;#39;mysql-server&amp;#39;]:
+…&lt;/pre&gt;n”],[“127.0.0.1”,“”,“puppet/modules/nginx/files/127_0_0_1.html”,“”,“&lt;p&gt;#
+vagrant/puppet/modules/nginx/files/127.0.0.1 server {nn&lt;pre&gt;listen
+80;nserver_name _;nroot /var/www/app;nindex
+…&lt;/pre&gt;n”],[“init.pp”,“”,“puppet/modules/nginx/manifests/init_pp.html”,“”,“&lt;p&gt;#
+vagrant/puppet/modules/nginx/manifests/init.pp class nginx {n&lt;p&gt;#
+Symlink /var/www/app on our guest with
+…n”],[“init.pp”,“”,“puppet/modules/php/manifests/init_pp.html”,“”,“&lt;p&gt;#
+vagrant/puppet/modules/php/manifests/init.pp class php {n&lt;p&gt;# Install
+the php5-fpm and php5-cli packages
+…n”],[“CHANGELOG”,“”,“puppet/modules/stdlib/CHANGELOG_md.html”,“”,“&lt;p&gt;2014-11-10
+- Supported Release 4.4.0n&lt;p&gt;Summaryn&lt;p&gt;This release has an
+overhauled readme, new private manifest
+…n”],[“CONTRIBUTING”,“”,“puppet/modules/stdlib/CONTRIBUTING_md.html”,“”,“&lt;p&gt;Checklist
+(and a short version for the impatient)n&lt;p&gt;Commits:n&lt;p&gt;Make
+commits of logical
+units.n”],[“Gemfile”,“”,“puppet/modules/stdlib/Gemfile.html”,“”,“&lt;p&gt;source
+ENV || &amp;#39;rubygems.org&amp;#39;n&lt;p&gt;def location_for(place,
+fake_version = nil)nn&lt;pre&gt;if place =~ /^(<a
+href=":@">git</a>[^#]*)#(.*)/
+…&lt;/pre&gt;n”],[“LICENSE”,“”,“puppet/modules/stdlib/LICENSE.html”,“”,“&lt;p&gt;Copyright
+(C) 2011 Puppet Labs Incn&lt;p&gt;and some parts:n&lt;p&gt;Copyright (C)
+2011 Krzysztof
+Wilczynskin”],[“README.markdown”,“”,“puppet/modules/stdlib/README_markdown.html”,“”,“&lt;p&gt;stdlibn&lt;p&gt;{Build
+Status]n&lt;p&gt;Table of
+Contentsn”],[“README_DEVELOPER.markdown”,“”,“puppet/modules/stdlib/README_DEVELOPER_markdown.html”,“”,“&lt;p&gt;Puppet
+Specific Factsn&lt;p&gt;Facter is meant to stand alone and apart from
+Puppet. However, Facternoftennruns
+…n”],[“README_SPECS.markdown”,“”,“puppet/modules/stdlib/README_SPECS_markdown.html”,“”,“&lt;p&gt;NOTEn&lt;p&gt;This
+project&amp;#39;s specs depend on puppet core, and thus they
+requirenthen<code>puppetlabs_spec_helper</code>
+…n”],[“RELEASE_PROCESS.markdown”,“”,“puppet/modules/stdlib/RELEASE_PROCESS_markdown.html”,“”,“&lt;p&gt;Contributing
+to this modulen&lt;p&gt;Work in a topic branchn&lt;p&gt;Submit a github
+pull
+requestn”],[“Rakefile”,“”,“puppet/modules/stdlib/Rakefile.html”,“”,“&lt;p&gt;require
+&amp;#39;rubygems&amp;#39;
+requiren&amp;#39;puppetlabs_spec_helper/rake_tasks&amp;#39;
+requiren&amp;#39;puppet-lint/tasks/puppet-lint&amp;#39;
+…n”],[“checksums.json”,“”,“puppet/modules/stdlib/checksums_json.html”,“”,“&lt;p&gt;{nn&lt;pre&gt;&amp;quot;CHANGELOG.md&amp;quot;:
+&amp;quot;f6f72416f5eca4c5a1bb637133b370ce&amp;quot;,n&amp;quot;CONTRIBUTING.md&amp;quot;:
+&amp;quot;d911815dd7d0d90b90bb35382a6e3298&amp;quot;,
+…&lt;/pre&gt;n”],[“init.pp”,“”,“puppet/modules/stdlib/manifests/init_pp.html”,“”,“&lt;p&gt;#
+Class: stdlib # # This module manages stdlib. Most of
+stdlib&amp;#39;snfeatures are automatically # loaded
+…n”],[“stages.pp”,“”,“puppet/modules/stdlib/manifests/stages_pp.html”,“”,“&lt;p&gt;#
+Class: stdlib::stages # # This class manages a standard set of run
+stagesnfor Puppet. It is managed
+…n”],[“metadata.json”,“”,“puppet/modules/stdlib/metadata_json.html”,“”,“&lt;p&gt;{nn&lt;pre&gt;&amp;quot;name&amp;quot;:
+&amp;quot;puppetlabs-stdlib&amp;quot;,n&amp;quot;version&amp;quot;:
+&amp;quot;4.4.0&amp;quot;,n&amp;quot;author&amp;quot;:
+&amp;quot;puppetlabs&amp;quot;,n&amp;quot;summary&amp;quot;:
+&amp;quot;Puppet Module Standard
+…&lt;/pre&gt;n”],[“spec.opts”,“”,“puppet/modules/stdlib/spec/spec_opts.html”,“”,“&lt;p&gt;–format
+s –colour –loadby mtime
+–backtracen”],[“file_line.pp”,“”,“puppet/modules/stdlib/tests/file_line_pp.html”,“”,“&lt;p&gt;#
+This is a simple smoke test # of the file_line resource type. file
+{n&amp;#39;/tmp/dansfile&amp;#39;:nn&lt;pre&gt;ensure
+…&lt;/pre&gt;n”],[“has_interface_with.pp”,“”,“puppet/modules/stdlib/tests/has_interface_with_pp.html”,“”,“&lt;p&gt;include
+stdlib
+info(&amp;#39;has_interface_with(&amp;#39;lo&amp;#39;):&amp;#39;,nhas_interface_with(&amp;#39;lo&amp;#39;))
+…n”],[“has_ip_address.pp”,“”,“puppet/modules/stdlib/tests/has_ip_address_pp.html”,“”,“&lt;p&gt;include
+stdlib
+info(&amp;#39;has_ip_address(&amp;#39;192.168.1.256&amp;#39;):&amp;#39;,nhas_ip_address(&amp;#39;192.168.1.256&amp;#39;))
+…n”],[“has_ip_network.pp”,“”,“puppet/modules/stdlib/tests/has_ip_network_pp.html”,“”,“&lt;p&gt;include
+stdlib
+info(&amp;#39;has_ip_network(&amp;#39;127.0.0.0&amp;#39;):&amp;#39;,nhas_ip_network(&amp;#39;127.0.0.0&amp;#39;))
+…n”],[“init.pp”,“”,“puppet/modules/stdlib/tests/init_pp.html”,“”,“&lt;p&gt;include
+stdlibn”]]}}</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

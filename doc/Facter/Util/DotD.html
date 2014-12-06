@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Facter::Util::DotD - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../../Object.html">Object</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-cache_lookup">#cache_lookup</a>
+    
+    <li ><a href="#method-i-cache_save-21">#cache_save!</a>
+    
+    <li ><a href="#method-i-cache_store">#cache_store</a>
+    
+    <li ><a href="#method-i-cache_time">#cache_time</a>
+    
+    <li ><a href="#method-i-create">#create</a>
+    
+    <li ><a href="#method-i-entries">#entries</a>
+    
+    <li ><a href="#method-i-fact_type">#fact_type</a>
+    
+    <li ><a href="#method-i-json_parser">#json_parser</a>
+    
+    <li ><a href="#method-i-load_cache">#load_cache</a>
+    
+    <li ><a href="#method-i-script_parser">#script_parser</a>
+    
+    <li ><a href="#method-i-txt_parser">#txt_parser</a>
+    
+    <li ><a href="#method-i-yaml_parser">#yaml_parser</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Facter::Util::DotD">
+  <h1 id="class-Facter::Util::DotD" class="class">
+    class Facter::Util::DotD
+  </h1>
+
+  <section class="description">
+    
+<p>A Facter plugin that loads facts from /etc/facter/facts.d and
+/etc/puppetlabs/facter/facts.d.</p>
+
+<p>Facts can be in the form of JSON, YAML or Text files and any executable
+that returns key=value pairs.</p>
+
+<p>In the case of scripts you can also create a file that contains a cache
+TTL.  For foo.sh store the ttl as just a number in foo.sh.ttl</p>
+
+<p>The cache is stored in /tmp/facts_cache.yaml as a mode 600 file and will
+have the end result of not calling your fact scripts more often than is
+needed</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(dir="/etc/facts.d", cache_file="/tmp/facts_cache.yml")</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">dir</span>=<span class="ruby-string">&quot;/etc/facts.d&quot;</span>, <span class="ruby-identifier">cache_file</span>=<span class="ruby-string">&quot;/tmp/facts_cache.yml&quot;</span>)
+  <span class="ruby-ivar">@dir</span> = <span class="ruby-identifier">dir</span>
+  <span class="ruby-ivar">@cache_file</span> = <span class="ruby-identifier">cache_file</span>
+  <span class="ruby-ivar">@cache</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@types</span> = {<span class="ruby-string">&quot;.txt&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:txt</span>, <span class="ruby-string">&quot;.json&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:json</span>, <span class="ruby-string">&quot;.yaml&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:yaml</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-cache_lookup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache_lookup</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cache_lookup-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cache_lookup</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">cache</span> = <span class="ruby-identifier">load_cache</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">cache</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">ttl</span> = <span class="ruby-identifier">cache_time</span>(<span class="ruby-identifier">file</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cache</span>[<span class="ruby-identifier">file</span>]
+    <span class="ruby-identifier">now</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">cache</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">:data</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">ttl</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">cache</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">:data</span>] <span class="ruby-keyword">if</span> (<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cache</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">:stored</span>]) <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">ttl</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cache_save-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache_save!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cache_save-21-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cache_save!</span>
+  <span class="ruby-identifier">cache</span> = <span class="ruby-identifier">load_cache</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@cache_file</span>, <span class="ruby-string">&quot;w&quot;</span>, <span class="ruby-value">0600</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-constant">YAML</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">cache</span>)) }
+<span class="ruby-keyword">rescue</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cache_store" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache_store</span><span
+            class="method-args">(file, data)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cache_store-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cache_store</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">load_cache</span>
+
+  <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">file</span>] = {<span class="ruby-value">:data</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">data</span>, <span class="ruby-value">:stored</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>}
+<span class="ruby-keyword">rescue</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cache_time" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cache_time</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cache_time-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cache_time</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">meta</span> = <span class="ruby-identifier">file</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.ttl&quot;</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">meta</span>).<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fact</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">fact_type</span>(<span class="ruby-identifier">fact</span>)
+    <span class="ruby-identifier">parser</span> = <span class="ruby-node">&quot;#{type}_parser&quot;</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-node">&quot;#{type}_parser&quot;</span>)
+      <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Parsing #{fact} using #{parser}&quot;</span>)
+
+      <span class="ruby-identifier">send</span>(<span class="ruby-identifier">parser</span>, <span class="ruby-identifier">fact</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-entries" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">entries</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="entries-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">entries</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>(<span class="ruby-ivar">@dir</span>).<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\.|\.ttl$/</span>}.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-ivar">@dir</span>, <span class="ruby-identifier">f</span>) }
+<span class="ruby-keyword">rescue</span>
+  []
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fact_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fact_type</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fact_type-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fact_type</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">extension</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">file</span>)
+
+  <span class="ruby-identifier">type</span> = <span class="ruby-ivar">@types</span>[<span class="ruby-identifier">extension</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:unknown</span>
+
+  <span class="ruby-identifier">type</span> = <span class="ruby-value">:script</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:unknown</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">file</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-json_parser" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">json_parser</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="json_parser-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">json_parser</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;json&#39;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">LoadError</span>
+    <span class="ruby-keyword">retry</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>)).<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">f</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">setcode</span> { <span class="ruby-identifier">v</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;Failed to handle #{file} as json facts: #{e.class}: #{e}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_cache" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_cache</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_cache-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_cache</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@cache</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@cache_file</span>)
+      <span class="ruby-ivar">@cache</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-ivar">@cache_file</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@cache</span> = {}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@cache</span>
+<span class="ruby-keyword">rescue</span>
+  <span class="ruby-ivar">@cache</span> = {}
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@cache</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-script_parser" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">script_parser</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="script_parser-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">script_parser</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">cache_lookup</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">ttl</span> = <span class="ruby-identifier">cache_time</span>(<span class="ruby-identifier">file</span>)
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">result</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">file</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ttl</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Updating cache for #{file}&quot;</span>)
+      <span class="ruby-identifier">cache_store</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">result</span>)
+      <span class="ruby-identifier">cache_save!</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Using cached data for #{file}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(.+)=(.+)$/</span>
+      <span class="ruby-identifier">var</span> = <span class="ruby-node">$1</span>; <span class="ruby-identifier">val</span> = <span class="ruby-node">$2</span>
+
+      <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">var</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">setcode</span> { <span class="ruby-identifier">val</span> }
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;Failed to handle #{file} as script facts: #{e.class}: #{e}&quot;</span>)
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n\t&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-txt_parser" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">txt_parser</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="txt_parser-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">txt_parser</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">file</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^([^=]+)=(.+)$/</span>
+      <span class="ruby-identifier">var</span> = <span class="ruby-node">$1</span>; <span class="ruby-identifier">val</span> = <span class="ruby-node">$2</span>
+
+      <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">var</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">setcode</span> { <span class="ruby-identifier">val</span> }
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;Failed to handle #{file} as text facts: #{e.class}: #{e}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaml_parser" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">yaml_parser</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="yaml_parser-source">
+            <pre><span class="ruby-comment"># File puppet/modules/stdlib/lib/facter/facter_dot_d.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaml_parser</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;yaml&#39;</span>
+
+  <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">file</span>).<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">f</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">setcode</span> { <span class="ruby-identifier">v</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;Failed to handle #{file} as yaml facts: #{e.class}: #{e}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
