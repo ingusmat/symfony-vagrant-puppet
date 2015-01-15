@@ -10,4 +10,4 @@ file { '/var/www/':
   ensure => 'directory',
 }
 
-include  php, nginx, libxml, pgsql, curl, memcached, nodejs, symfony_installer, redis, composer
+include  curl, php, nginx, libxml, pgsql, memcached, nodejs, symfony_installer, redis, composer

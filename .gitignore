@@ -2,4 +2,4 @@
 ### Vagrant template
 .vagrant/
 .idea/
-app/
+project/

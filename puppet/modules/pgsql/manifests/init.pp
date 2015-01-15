@@ -53,4 +53,15 @@ class pgsql {
     ensure => running,
     require => Package['postgresql'],
   }
+
+  user { 'symfony':
+    ensure => present,
+    managehome => true
+  }
+
+  exec {'set symfony user password':
+    command => "/bin/echo \"symfony:hHcpm9wNzGkw\" | /usr/sbin/chpasswd",
+    require => User ['symfony']
+  }
+
 }

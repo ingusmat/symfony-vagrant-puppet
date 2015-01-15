@@ -30,18 +30,22 @@ class php {
     require => Exec['apt-get update'],
   }
 
-  file { '/etc/php5/cli/php.ini':
+  file { '/etc/php5/fpm/php.ini':
     source  => 'puppet:///modules/php/php.ini',
     require => Package['php5-fpm'],
   }
 
-#  file { '/etc/php5/fpm/php.ini':
-#    source  => 'puppet:///modules/php/php.ini',
-#    require => Package['php5-fpm'],
-#  }
-
   file { '/etc/php5/fpm/pool.d/www.conf':
     source  => 'puppet:///modules/php/www.conf',
+    require => Package['php5-fpm'],
+  }
+
+  file { '/etc/php5/cli':
+    ensure => directory
+  }
+
+  file { '/etc/php5/cli/php.ini':
+    source  => 'puppet:///modules/php/php.cli.ini',
     require => Package['php5-fpm'],
   }
 
