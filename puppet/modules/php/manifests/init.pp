@@ -24,7 +24,8 @@ class php {
     'php5-cli',
     'php5-intl',
     'php-apc',
-    'php5-pgsql']:
+    'php5-pgsql',
+    'php5-curl']:
     ensure => present,
     install_options => ['--force-yes'],
     require => Exec['apt-get update'],
