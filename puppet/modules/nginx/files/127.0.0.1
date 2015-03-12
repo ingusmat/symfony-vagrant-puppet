@@ -1,6 +1,6 @@
 server {
     server_name domain.tld www.domain.tld;
-    root /var/www/momworthy/web;
+    root /var/www/OpenSkirmish/web;
 
     location / {
         # try to serve file directly, fallback to app.php
@@ -29,6 +29,6 @@ server {
         internal;
     }
 
-    error_log /var/log/nginx/momworthy_error.log;
-    access_log /var/log/nginx/momworthy_access.log;
+    error_log /var/log/nginx/OpenSkirmish_error.log;
+    access_log /var/log/nginx/OpenSkirmish_access.log;
 }
